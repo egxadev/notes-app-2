@@ -28,7 +28,7 @@ class NoteInput extends React.Component {
     onBodyChangeEventHandler(event) {
         this.setState(() => {
             return {
-                body: event.target.value,
+                body: event.target.innerHTML,
             };
         });
     }
@@ -47,11 +47,10 @@ class NoteInput extends React.Component {
                     value={this.state.title}
                     onChange={this.onTitleChangeEventHandler}
                 />
-                <input
-                    type="text"
+                <div
                     placeholder="Write a note ..."
-                    value={this.state.body}
-                    onChange={this.onBodyChangeEventHandler}
+                    contentEditable
+                    onInput={this.onBodyChangeEventHandler}
                 />
                 <button type="submit">Add</button>
             </form>

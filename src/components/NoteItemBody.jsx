@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import parser from 'html-react-parser';
 import { showFormattedDate } from '../utils/index';
 
 function NoteItemBody({ title, body, createdAt }) {
@@ -9,7 +10,7 @@ function NoteItemBody({ title, body, createdAt }) {
         <div className="note-item__body">
             <h3 className="note-item__title">{title}</h3>
             <small className="grey">{date}</small>
-            <p className="note-item__body">{body}</p>
+            <div className="note-item__body">{parser(body)}</div>
         </div>
     );
 }

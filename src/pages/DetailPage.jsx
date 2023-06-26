@@ -1,4 +1,5 @@
 import React from 'react';
+import parser from 'html-react-parser';
 import { useParams } from 'react-router-dom';
 import { showFormattedDate } from '../utils/index';
 import { getNote } from '../utils/local-data';
@@ -17,7 +18,7 @@ function DetailPage() {
             <h2>{note.title}</h2>
             <hr />
             <small className="grey">{showFormattedDate(note.createdAt)}</small>
-            <article className="content">{note.body}</article>
+            <div className="content">{parser(note.body)}</div>
         </section>
     );
 }

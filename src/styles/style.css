@@ -136,7 +136,7 @@ img {
 }
 
 .note-input input,
-.note-input textarea,
+.note-input div,
 .note-input button {
     border-radius: 10px;
     border: none;
@@ -145,6 +145,11 @@ img {
     padding: 8px;
     margin: 8px 0;
     font-family: 'Inter', sans-serif;
+}
+
+.note-input div {
+    background: #fff;
+    height: 350px;
 }
 
 .note-input button {
