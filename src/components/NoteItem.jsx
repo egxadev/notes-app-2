@@ -1,5 +1,5 @@
 import React from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import NoteItemBody from './NoteItemBody';
 import NoteItemFooter from './NoteItemFooter';
 
@@ -27,13 +27,13 @@ function NoteItem({
     );
 }
 
-NoteItem.propType = {
-    title: PropType.string.isRequired,
-    body: PropType.string.isRequired,
-    createdAt: PropType.string.isRequired,
-    id: PropType.number.isRequired,
-    onDelete: PropType.func.isRequired,
-    onArchive: PropType.func.isRequired,
+NoteItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onArchive: PropTypes.func.isRequired,
 };
 
 export default NoteItem;
