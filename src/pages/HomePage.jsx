@@ -64,7 +64,6 @@ class HomePage extends React.Component {
     }
 
     render() {
-        // console.log(this.state.notes);
         const notes = this.state.notes.filter((note) => {
             return note.title
                 .toLowerCase()

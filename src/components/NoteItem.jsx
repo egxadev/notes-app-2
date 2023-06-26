@@ -3,13 +3,23 @@ import PropType from 'prop-types';
 import NoteItemBody from './NoteItemBody';
 import NoteItemFooter from './NoteItemFooter';
 
-function NoteItem({ title, body, createdAt, id, onDelete, onArchive }) {
+function NoteItem({
+    title,
+    body,
+    archived,
+    createdAt,
+    id,
+    onDelete,
+    onArchive,
+}) {
+    console.log(archived);
     return (
         <div className="note-items">
             <div className="note-item">
                 <NoteItemBody title={title} body={body} createdAt={createdAt} />
                 <NoteItemFooter
                     id={id}
+                    archived={archived}
                     onDelete={onDelete}
                     onArchive={onArchive}
                 />
