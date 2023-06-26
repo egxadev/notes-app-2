@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: whitesmoke;
+}
+
+img {
+    width: 100%;
+}
+
+.note-app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.note-app__header {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.note-app__header h1 {
+    font-weight: normal;
+    font-size: 32px;
+    flex: 1;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding: 16px;
+}
+
+.navigation ul li a {
+    font-size: 28px;
+    color: black;
+}
+
+.red {
+    color: red;
+}
+.grey {
+    color: rgb(119, 119, 119);
+}
+
+.search-bar {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    padding: 12px;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    border-radius: 20px;
+    background: #f5f5f5;
+    box-shadow: 5px 5px 17px #cecece, -5px -5px 17px #ffffff;
+}
+
+.note-app .title {
+    margin-top: 1rem;
+    border-bottom: 5px solid #cecece;
+}
+
+.note-list {
+    margin: 15px -5px;
+}
+
+.note-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.note-items {
+    float: left;
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+.note-item {
+    padding: 16px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    box-shadow: 5px 5px 17px #cecece, -5px -5px 17px #ffffff;
+    position: relative;
+    min-height: 350px;
+    margin-bottom: 1rem;
+}
+
+.note-item__footer {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding-bottom: 0.5rem;
+}
+
+.note-item__button {
+    cursor: pointer;
+}
+
+.note-item__image img {
+    width: 64px;
+    border-radius: 50%;
+}
+
+.note-item__title {
+    padding: 4px 0;
+}
+
+.note-item__body {
+    font-weight: lighter;
+}
+
+.note-item__button {
+    margin: 0 2px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.note-input {
+    border-radius: 20px;
+    background: #f5f5f5;
+    box-shadow: 5px 5px 17px #cecece, -5px -5px 17px #ffffff;
+    padding: 16px;
+    margin: 14px 0;
+    margin-bottom: 32px;
+}
+
+.note-input .limit {
+    width: 100%;
+    text-align: right;
+}
+
+.note-input input,
+.note-input textarea,
+.note-input button {
+    border-radius: 10px;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.note-input button {
+    width: 100%;
+    padding: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.content {
+    margin-top: 1rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
