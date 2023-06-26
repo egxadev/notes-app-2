@@ -3,7 +3,11 @@ import { useSearchParams } from 'react-router-dom';
 import NoteList from '../components/NoteList';
 import NoteListArchive from '../components/NoteListArchive';
 import SearchBar from '../components/SearchBar';
-import { archiveNote, deleteNote, getNotes } from '../utils/index';
+import {
+    toggleArchiveNote,
+    deleteNote,
+    getAllNotes,
+} from '../utils/local-data';
 
 function HomePageWrapper() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -24,7 +28,7 @@ class HomePage extends React.Component {
         super(props);
 
         this.state = {
-            notes: getNotes(),
+            notes: getAllNotes(),
             keyword: props.defaultKeyword || '',
         };
 
@@ -38,17 +42,17 @@ class HomePage extends React.Component {
 
         this.setState(() => {
             return {
-                notes: getNotes(),
+                notes: getAllNotes(),
             };
         });
     }
 
     onArchiveHandler(id) {
-        archiveNote(id);
+        toggleArchiveNote(id);
 
         this.setState(() => {
             return {
-                notes: getNotes(),
+                notes: getAllNotes(),
             };
         });
     }

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import NoteItem from './NoteItem';
 
 function NoteList({ notes, onDelete, onArchive }) {
-    const archives = notes.filter((note) => note.archived == false);
+    const activeNotes = notes.filter((note) => note.archived == false);
 
     return (
         <div className="note-list">
-            {archives.length ? (
-                archives.map((note) => (
+            {activeNotes.length ? (
+                activeNotes.map((note) => (
                     <NoteItem
                         key={note.id}
                         id={note.id}

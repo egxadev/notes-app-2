@@ -38,7 +38,8 @@ function NoteItemFooter({ id, archived, onDelete, onArchive }) {
 }
 
 NoteItemFooter.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
+    archived: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
     onArchive: PropTypes.func.isRequired,
 };

@@ -12,7 +12,6 @@ function NoteItem({
     onDelete,
     onArchive,
 }) {
-    console.log(archived);
     return (
         <div className="note-items">
             <div className="note-item">

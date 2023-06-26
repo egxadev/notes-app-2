@@ -1,12 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getNotes, showFormattedDate } from '../utils';
+import { showFormattedDate } from '../utils/index';
+import { getNote } from '../utils/local-data';
 import NotFoundPage from '../pages/NotFoundPage';
 
 function DetailPage() {
     const { id } = useParams();
-    const notes = getNotes();
-    const note = notes.find((note) => note.id == id);
+    const note = getNote(id);
 
     if (!note) {
         return <NotFoundPage />;
