@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSearchParams } from 'react-router-dom';
 import NoteList from '../components/NoteList';
 import NoteListArchive from '../components/NoteListArchive';
@@ -96,5 +97,10 @@ class HomePage extends React.Component {
         );
     }
 }
+
+HomePage.propTypes = {
+    defaultKeyword: PropTypes.string.isRequired,
+    keywordChange: PropTypes.func.isRequired,
+};
 
 export default HomePageWrapper;

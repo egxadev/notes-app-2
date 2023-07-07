@@ -30,6 +30,7 @@ function NoteItem({
 NoteItem.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
+    archived: PropTypes.bool.isRequired,
     createdAt: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     onDelete: PropTypes.func.isRequired,
