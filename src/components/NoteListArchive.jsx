@@ -17,7 +17,7 @@ function NoteList({ notes, onDelete, onArchive }) {
                     />
                 ))
             ) : (
-                <div className="note-items">Notes Not found</div>
+                <div className="note-items">Archives Not found</div>
             )}
         </div>
     );
